@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Virtual AI Clinician — Symptom Triage Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <div class="brand-text">
+        <p class="eyebrow">Virtual AI Clinician</p>
+        <h1>Symptom Triage<br>Console</h1>
+      </div>
+    </div>
+
+    <div class="pulse-divider" aria-hidden="true">
+      <svg viewBox="0 0 300 40" preserveAspectRatio="none">
+        <polyline points="0,20 60,20 75,20 85,4 95,36 105,20 120,20 140,20 152,20 160,10 168,30 176,20 190,20 300,20" />
+      </svg>
+    </div>
+
+    <section class="how-it-works">
+      <h2>How this works</h2>
+      <ol>
+        <li><span class="step-num">01</span><div><strong>Describe your symptoms</strong><p>Tell the console what you're experiencing, in your own words.</p></div></li>
+        <li><span class="step-num">02</span><div><strong>Answer a follow-up</strong><p>The assistant may ask one clarifying question if needed.</p></div></li>
+        <li><span class="step-num">03</span><div><strong>Get a triage result</strong><p>Receive a triage level, plain-language advice, and next steps.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="legend">
+      <h2>Triage levels</h2>
+      <div class="legend-item"><span class="dot self-care"></span> Self-care</div>
+      <div class="legend-item"><span class="dot consult"></span> Consult a doctor</div>
+      <div class="legend-item"><span class="dot emergency"></span> Emergency</div>
+    </section>
+
+    <div class="disclaimer-box">
+      <p><strong>Not a medical diagnosis.</strong> This console is a student demonstration project. For real symptoms, always consult a licensed medical professional. In an emergency, call your local emergency number immediately.</p>
+    </div>
+  </aside>
+
+  <main class="chat-panel">
+    <div class="chat-window" id="chatWindow">
+      <div class="message assistant">
+        <div class="bubble">
+          <p>Hello — I'm the Virtual AI Clinician. Describe what you're experiencing and I'll help you understand possible next steps. I don't diagnose or prescribe — I triage and guide.</p>
+        </div>
+      </div>
+    </div>
+
+    <form class="composer" id="composerForm">
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Describe your symptoms… e.g. “I've had a sore throat and mild fever since yesterday”"
+        autocomplete="off"
+        required
+      />
+      <button type="submit" id="sendBtn">
+        <span>Send</span>
+      </button>
+    </form>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
